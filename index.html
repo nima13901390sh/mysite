@@ -3,48 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .red{
-            font-size: 50px;
-            
-            text-align: right;
-        }
-        .nima{
-            font-size: 40px;
-            color: rgb(117, 104, 28);
-            text-align: right;
-        }
-        .shah{
-            text-align: right;
-        }
-        #golabi{
-            font-size: 40px;
-            text-align: right;
-            color: black;
-        }
-    </style>
-    <title>وب سایت نیما شاه گلدی</title><link rel="icon" type="image/png" href="https://imgurl.ir/uploads/g64148_websitekhodam.png">
+    <title>صفحه ورود</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: rgb(60, 207, 146);text-align: right;">
-    <center> 
-        <input type="image" src="https://imgurl.ir/uploads/g64148_websitekhodam.png" alt="">
-    </center>
-    <p class="red">سلام</p>
-    <p class="nima"> من نیما شاه گلدی هستم و این وبسایت من است. من در این وبسایت اطلاعاتی را راجع به موضوعات مختلف بارگزاری میکنم</p>
-    <p id="golabi">موضوعات را میتوانید در جدول زیر مشاهده کنید</p>
-    <center>
-        <table border="1">
-            <tr style="font-size: 50px;">
-                <th>موضوعات</th>
-            </tr>
-            <tr>
-            <td style="font-size: 40px;"><a href="file:///C:/Users/scc/Documents/example.html">ویدیو های پایتون</a></td>
-            </tr>
-            <tr style="font-size: 40px;">
-                <td>سلام</td>
-            </tr>
-        </table>
-    </center>
-    
+<body>
+    <form class="login">
+        <h1>صفحه ورود</h1>
+        <input type="text" placeholder="نام کاربری"/>
+        <input type="password" placeholder="رمز عبور">
+        <span>
+            <input type="checkbox" id="rememberme" />
+            <label for="rememberme">مرا به خاطر بسپار</label>
+        </span>
+        <input type="submit" value="ورود">
+    </form>
 </body>
 </html>
