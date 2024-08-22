@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+@font-face{
+    font-family: 'Vazir-Bold';
+    src: url(Vazir-Bold.ttf)
+
+}
+@media screen and (max-width:360px){
+
+    .sub-menu li,.sub-menu ul{
+          width: 100%;
+    }
+    .mobile-menu{
+        display: block;
+        
+        width: 60%;
+        height: 100%;
+        position:fixed;
+        top: 0;
+        right: -100%;
+        z-index: 999;
+        transition-duration: 0.5s;
+        overflow: auto;
+    }
+}
