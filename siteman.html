@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>صفحه ورود</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+		body {
+			text-align: left;
+			direction: rtl;
+			font-family: Vazir-Bold;
+            src: url(Vazir-Bold.ttf);
+		}
+		
+		a.button {
+			display: inline-block;
+			padding: 0.5em 2em;
+			background-color: green;
+			color: #fff;
+			text-decoration: none;
+			border-radius: 0.2em;
+			border-bottom: 2px solid #044;
+		}
+		
+		a.button:hover {
+			background-color: #0aa;
+			border-bottom-color: #088;
+		}
+        .shah{
+            margin-right: 10px;
+            text-align: right;
+            font-size: 35px;
+        }
+	</style>
 </head>
 <body dir="rtl">
     <form class="login">
@@ -15,8 +43,13 @@
             <input type="checkbox" id="rememberme" />
             <label for="rememberme">مرا به خاطر بسپار</label>
         </span>
-        <input type="submit" value="ورود">
+        <a href="index.html" class="button">ورود</a>
+        <br>
+        <br>
+        <br>
         <a href="">حساب کاربری ندارید ؟ یک حساب برای خود بسازید</a>
+        <br>
     </form>
+
 </body>
 </html>
