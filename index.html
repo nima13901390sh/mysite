@@ -1,84 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>وب سایت نیما شاه گلدی</title>
-    <link rel="stylesheet" href="asly.css">
+    <title>ورود به سیستم</title>
     <style>
-		body {
-			text-align: left;
-			direction: rtl;
-			font-family: Vazir-Bold;
-            src: url(Vazir-Bold.ttf);
-		}
-		
-		a.button {
-			display: inline-block;
-			padding: 0.5em 2em;
-			background-color: green;
-			color: #fff;
-			text-decoration: none;
-			border-radius: 0.2em;
-			border-bottom: 2px solid #044;
-		}
-		
-		a.button:hover {
-			background-color: #0aa;
-			border-bottom-color: #088;
-		}
-        .shah{
-            margin-right: 10px;
-            text-align: right;
-            font-size: 35px;
-            font-family: Vazir-Bold;
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            direction: rtl;
+            font-family: "Vazir-Bold";
             src: url(Vazir-Bold.ttf);
         }
-        table , th , td{
-           border: 1px solid black; 
-           font-size: 20px;
-           color: brown;
-           margin-right: 10px;
-           border-spacing: 10px;
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        table tr:nth-child(odd){
-            background-color: #6aba68;
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            align-items: center;
         }
-        table tr:nth-child(even){
-            background-color: #b0e9e7;
-        }
-        th , td{
-            padding: 15px;
-        }
-        table th{
-            background-color: black;
+        button {
+            padding: 10px;
+            width: 100%;
+            background-color: #4CAF50;
             color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
-	</style>
+        button:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
 </head>
-<body style="background-color: orange;">
-    <br>
-    
-    <a href="siteman.html" class="button">ورود / ثبت نام</a>
-    <p class="shah">سلام</p>
-    <p class="shah">من نیما شاه گلدی هستم و این وب سایت من است</p>
-    <p class="shah" style="color: black;">من در این وب سایت مطالب مختلفی را بارگذاری میکنم و امیدوارم شما هم از این مطالب لذت برید</p>
-    <br>
-    <br>
-    <center>
-        <table style="text-align: center;">
-            <tr>
-                <th>موضوعات</th>
-            </tr>
-            <tr>
-                <td><a href="">فیلمها ی آموزشی در حوزه های مختلف</a></td>
-            </tr>
-            <tr>
-                <td><a href="">مطالب آموزشی به صورت پی دی اف</a></td>
-            </tr>
-        </table>
-    </center>
-    <p></p>
-    <br>
+<body>
+
+<div class="login-container">
+    <h2>ورود به سیستم</h2>
+    <form id="loginForm" onsubmit="login(event)">
+        <label for="username">نام کاربری:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">رمز عبور:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">ورود</button>
+        <p class="error" id="errorMsg"></p>
+    </form>
+</div>
+
+<script>
+    // اطلاعات نام کاربری و رمز عبور ذخیره شده
+    const correctUsername = "nima";
+    const correctPassword = "password123";
+
+    function login(event) {
+        event.preventDefault(); // جلوگیری از ریفرش صفحه
+
+        // دریافت مقادیر وارد شده
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // بررسی صحت نام کاربری و رمز عبور
+        if (username === correctUsername && password === correctPassword) {
+            // هدایت کاربر به صفحه بعدی
+            window.location.href = "index.html"; // آدرس صفحه‌ای که کاربر باید به آن هدایت شود
+        } else {
+            // نمایش پیام خطا
+            document.getElementById('errorMsg').textContent = "نام کاربری یا رمز عبور اشتباه است.";
+        }
+    }
+</script>
+
 </body>
 </html>
