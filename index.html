@@ -22,6 +22,7 @@
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-left: 10px;
         }
         input[type="text"], input[type="password"] {
             width: 100%;
@@ -50,6 +51,7 @@
     </style>
 </head>
 <body>
+    
 
 <div class="login-container">
     <h2>ورود به سیستم</h2>
@@ -64,6 +66,7 @@
         <p class="error" id="errorMsg"></p>
     </form>
 </div>
+
 
 <script>
     // اطلاعات نام کاربری و رمز عبور ذخیره شده
@@ -87,6 +90,63 @@
         }
     }
 </script>
+<br>
+<br>
+<div id="date"></div>
+<div id="time"></div>
 
+<script>
+    // تابعی برای تبدیل تاریخ میلادی به شمسی
+    function toJalali(gy, gm, gd) {
+        const g_d_m = [0, 31, (gy % 4 == 0 && gy % 100 != 0 || gy % 400 == 0) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        let gy2 = (gm > 2) ? (gy + 1) : gy;
+        let days = 355666 + (365 * gy) + Math.floor((gy2 + 3) / 4) - Math.floor((gy2 + 99) / 100) + Math.floor((gy2 + 399) / 400);
+        for (let i = 0; i < gm; ++i) days += g_d_m[i];
+        days += gd;
+        let jy = -1595 + (33 * Math.floor(days / 12053));
+        days %= 12053;
+        jy += 4 * Math.floor(days / 1461);
+        days %= 1461;
+        if (days > 365) {
+            jy += Math.floor((days - 1) / 365);
+            days = (days - 1) % 365;
+        }
+        let jm = (days < 186) ? 1 + Math.floor(days / 31) : 7 + Math.floor((days - 186) / 30);
+        let jd = 1 + ((days < 186) ? (days % 31) : ((days - 186) % 30));
+        return [jy, jm, jd];
+    }
+
+    // تابعی برای نمایش روز هفته
+    function getPersianDayOfWeek(day) {
+        const daysOfWeek = ['یکشنبه', 'دوشنبه', 'سه‌شنبه', 'چهارشنبه', 'پنج‌شنبه', 'جمعه', 'شنبه'];
+        return daysOfWeek[day];
+    }
+
+    // گرفتن تاریخ و زمان کنونی
+    function updateDateTime() {
+        const today = new Date();
+        const gregorianYear = today.getFullYear();
+        const gregorianMonth = today.getMonth() + 1;
+        const gregorianDay = today.getDate();
+        const dayOfWeek = today.getDay();
+        const hours = today.getHours();
+        const minutes = today.getMinutes();
+        const seconds = today.getSeconds();
+
+        // تبدیل به تاریخ شمسی
+        const [jalaliYear, jalaliMonth, jalaliDay] = toJalali(gregorianYear, gregorianMonth, gregorianDay);
+        const persianDayOfWeek = getPersianDayOfWeek(dayOfWeek);
+
+        // نمایش تاریخ شمسی و روز هفته
+        document.getElementById('date').innerHTML = `امروز: ${persianDayOfWeek}، ${jalaliDay} / ${jalaliMonth} / ${jalaliYear}`;
+
+        // نمایش زمان (ساعت، دقیقه، ثانیه)
+        document.getElementById('time').innerHTML = `زمان: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    // به‌روزرسانی تاریخ و زمان هر ثانیه
+    setInterval(updateDateTime, 1000);
+
+</script>
 </body>
 </html>
