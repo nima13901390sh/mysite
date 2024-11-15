@@ -13,10 +13,55 @@
             background-color: goldenrod;
             font-size: 25px;
         }
+        table , th , td{
+           border: 1px solid black; 
+           font-size: 20px;
+           color: brown;
+           margin-right: 10px;
+           border-spacing: 10px;
+        }
+        table tr:nth-child(odd){
+            background-color: #6aba68;
+        }
+        table tr:nth-child(even){
+            background-color: #b0e9e7;
+        }
+        th , td{
+            padding: 15px;
+        }
+        table th{
+            background-color: black;
+            color: white;
+        }
+        hr{
+            display: block;
+            justify-content: center;
+        }
+        table{
+            margin-bottom: 100px;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
     <p style="text-align: center;">فیلم های آموزشی </p>
     <video src=""></video>
+    <table style="text-align: right;">
+        <tr>
+            <th style="text-align: center;">مطالب</th>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><a href="">ریاضی</a></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><a href="">علوم</a></td>
+        </tr>
+        <tr>
+            <td><a href="">مطالعات اجتماعی</a></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;"><a href="">فارسی</a></td>
+        </tr>
+    </table>
 </body>
 </html>
