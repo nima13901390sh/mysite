@@ -54,6 +54,65 @@
             background-color: black;
             color: white;
         }
+        h1 {
+      text-align: center;
+    }
+
+        #comment-form {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 500px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        #comment-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        #comment-form textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #comment-form button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #comment-form button:hover {
+            background-color: #0056b3;
+        }
+
+        #comments {
+            margin: 20px auto;
+            max-width: 500px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .comment {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .comment:last-child {
+            border-bottom: none;
+        }       
 	</style>
 </head>
 <body style="background-color: orange;">
@@ -92,5 +151,46 @@
     <br>
     <br>
     <br>
+    <h1>ثبت نظر کاربران</h1>
+
+    <div id="comment-form">
+      <label for="comment" style="text-align: right;font-size: 20px;">نظر خود را بنویسید:</label>
+      <textarea id="comment" placeholder="نظر خود را وارد کنید..."></textarea>
+      <button onclick="submitComment()">ثبت نظر</button>
+    </div>
+  
+    <div id="comments">
+      <h3 style="text-align: center;">نظرات کاربران:</h3>
+      <br>
+      <br>
+      <div id="comment-list" style="text-align: center;"></div>
+    </div>
+  
+    <script>
+      function submitComment() {
+        const commentInput = document.getElementById('comment');
+        const commentList = document.getElementById('comment-list');
+  
+        // گرفتن متن نظر
+        const commentText = commentInput.value.trim();
+  
+        // بررسی اینکه کاربر نظر وارد کرده است یا نه
+        if (!commentText) {
+          alert('لطفاً نظر خود را وارد کنید!');
+          return;
+        }
+  
+        // ساخت یک نظر جدید
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'comment';
+        commentDiv.textContent = commentText;
+  
+        // اضافه کردن نظر به لیست
+        commentList.appendChild(commentDiv);
+  
+        // پاک کردن متن داخل textarea
+        commentInput.value = '';
+      }
+    </script>
 </body>
 </html>
