@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ورود به سیستم</title>
+    	<!-- Google Tag Manager -->
+	    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	    })(window,document,'script','dataLayer','GTM-NP4PLTPF');</script>
+	    <!-- End Google Tag Manager -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,6 +58,10 @@
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP4PLTPF"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
     
 
 <div class="login-container">
@@ -69,23 +80,23 @@
 
 
 <script>
-    // اطلاعات نام کاربری و رمز عبور ذخیره شده
+    
     const correctUsername = "nima";
     const correctPassword = "password123";
 
     function login(event) {
-        event.preventDefault(); // جلوگیری از ریفرش صفحه
+        event.preventDefault(); 
 
-        // دریافت مقادیر وارد شده
+        
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        // بررسی صحت نام کاربری و رمز عبور
+        
         if (username === correctUsername && password === correctPassword) {
-            // هدایت کاربر به صفحه بعدی
+            
             window.location.href = "n.html"; // آدرس صفحه‌ای که کاربر باید به آن هدایت شود
         } else {
-            // نمایش پیام خطا
+            
             document.getElementById('errorMsg').textContent = "نام کاربری یا رمز عبور اشتباه است.";
         }
     }
@@ -96,7 +107,7 @@
 <div id="time"></div>
 
 <script>
-    // تابعی برای تبدیل تاریخ میلادی به شمسی
+    
     function toJalali(gy, gm, gd) {
         const g_d_m = [0, 31, (gy % 4 == 0 && gy % 100 != 0 || gy % 400 == 0) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
         let gy2 = (gm > 2) ? (gy + 1) : gy;
@@ -116,13 +127,13 @@
         return [jy, jm, jd];
     }
 
-    // تابعی برای نمایش روز هفته
+    
     function getPersianDayOfWeek(day) {
         const daysOfWeek = ['یکشنبه', 'دوشنبه', 'سه‌شنبه', 'چهارشنبه', 'پنج‌شنبه', 'جمعه', 'شنبه'];
         return daysOfWeek[day];
     }
 
-    // گرفتن تاریخ و زمان کنونی
+    
     function updateDateTime() {
         const today = new Date();
         const gregorianYear = today.getFullYear();
@@ -133,18 +144,18 @@
         const minutes = today.getMinutes();
         const seconds = today.getSeconds();
 
-        // تبدیل به تاریخ شمسی
+        
         const [jalaliYear, jalaliMonth, jalaliDay] = toJalali(gregorianYear, gregorianMonth, gregorianDay);
         const persianDayOfWeek = getPersianDayOfWeek(dayOfWeek);
 
-        // نمایش تاریخ شمسی و روز هفته
+        
         document.getElementById('date').innerHTML = `امروز: ${persianDayOfWeek}، ${jalaliDay} / ${jalaliMonth} / ${jalaliYear}`;
 
-        // نمایش زمان (ساعت، دقیقه، ثانیه)
+        
         document.getElementById('time').innerHTML = `زمان: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
     }
 
-    // به‌روزرسانی تاریخ و زمان هر ثانیه
+    
     setInterval(updateDateTime, 1000);
 
 </script>
