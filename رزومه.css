@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+@font-face{
+    font-family: 'yekan';
+    src: url(YekanBakh-Bold.ttf)
+
+}
+body{
+    font-family: 'yekan';
+    direction: rtl;
+
+}
+#header:hover{
+    color: gold;
+}
