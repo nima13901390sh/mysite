@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "iransans";
+    src: url(iransansx-regular.woff);
+}
+body{
+    font-family: "iransans";
+}
