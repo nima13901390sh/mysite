@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "yekan-bakh";
+    src: url(iransansx-regular.woff);
+}
+body{
+    font-family: "yekan-bakh";
+}
+nav{
+    border-color: black;
+}

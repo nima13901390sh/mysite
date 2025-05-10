@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "yekan-bakh";
+    src: url(iransansx-regular.woff);
+}
+body{
+    font-family: "yekan-bakh";
+    align-items: center;
+    justify-content: center;
+    direction: rtl;
+
+}
+.content{
+    display: flex;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+.content1{
+    display: flex;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+   
+}
+.lock{
+    
+    height: 50px;
+    width: 50px;
+    background-color: #48b3fb;
+    color:#fff;
+    line-height: 48px;
+    font-size: 20px;
+    border-radius:  0px;
+    border: 1px solid #48b3fb;
+}
+.lock1{
+
+    height: 50px;
+    width: 50px;
+    background-color: #48b3fb;
+    color:#fff;
+    line-height: 48px;
+    font-size: 20px;
+    border-radius:  0px;
+    border: 1px solid #48b3fb;
+
+}
+input[type="password"]{
+    height: 100%;
+    width: 100%;
+    background-color: #f9fdff;
+    
+    transition: all 0.2s;
+}
+input[type="text"]{
+    height: 100%;
+    width: 100%;
+    background-color: #f9fdff;
+    direction: rtl;
+    transition: all 0.2s;
+}
+input[type="text"]:focus{
+    background-color: #fff;
+}
+input[type="password"]:focus{
+    background-color: #fff;
+}
+
+
+input{
+    border-radius: 0px ;
+}
