@@ -1,0 +1,74 @@
+*{
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "vazir";
+    src: url(../fonts/vazir/Vazir-FD-WOL.ttf) format('truetype');
+    src: url(../fonts/vazir/Vazir-FD-WOL.woff) format('woff');
+    src:url(../fonts/vazir/Vazir-FD-WOL.woff2) format('woff2');
+    src: url(../fonts/vazir/Vazir-FD-WOL.eot) format('eot');
+}
+@font-face {
+    font-family: "vazir-Bold";
+    src: url(../fonts/vazir-Bold/Vazir-Bold-FD-WOL.ttf) format('truetype');
+    src: url(../fonts/vazir-Bold/Vazir-Bold-FD-WOL.woff) format('woff');
+    src: url(../fonts/vazir-Bold/Vazir-Bold-FD-WOL.woff2) format('woff2');
+    src: url(../fonts/vazir-Bold/Vazir-Bold-FD-WOL.eot) format('eot');
+}
+@font-face {
+    font-family: "vazir-light";
+    src: url(../fonts/vazir-light/Vazir-Light-FD-WOL.ttf) format('truetype');
+    src: url(../fonts/vazir-light/Vazir-Light-FD-WOL.woff) format('woff');
+    src: url(../fonts/vazir-light/Vazir-Light-FD-WOL.woff2) format('woff2');
+    src: url(../fonts/vazir-light/Vazir-Light-FD-WOL.eot) format('eot');
+}
+input{
+    all: unset;
+}
+textarea{
+    all: unset;
+}
+@font-face {
+    font-family: "vazir-medium";
+    src: url(../fonts/vazir-medium/Vazir-Medium-FD-WOL.ttf) format('truetype');
+    src: url(../fonts/vazir-medium/Vazir-Medium-FD-WOL.woff) format('woff');
+    src: url(../fonts/vazir-medium/Vazir-Medium-FD-WOL.woff2) format('woff2');
+    src: url(../fonts/vazir-medium/Vazir-Medium-FD-WOL.eot) format('eot');
+}
+@font-face {
+    font-family: "vazir-thin";
+    src: url(../fonts/vazir-thin/Vazir-Thin-FD-WOL.ttf) format('truetype');
+    src: url(../fonts/vazir-thin/Vazir-Thin-FD-WOL.woff) format('woff');
+    src: url(../fonts/vazir-thin/Vazir-Thin-FD-WOL.woff2) format('woff2');
+    src: url(../fonts/vazir-thin/Vazir-Thin-FD-WOL.eot) format('eot');
+}
+label{
+    font-family: "vazir-medium";
+}
+input{
+    height: 40px;
+    width: 200px;
+    border: 2px solid rgba(143, 142, 142,0.7);
+   border-radius: 10px;
+}
+input{
+    padding: 10px;
+    font-size: 17px;
+}
+.container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+::placeholder{
+    font-family: "vazir";
+}
+textarea{
+    border: 2px solid  rgba(121, 119, 119, 0.7);
+    padding: 5px;
+    border-radius: 10px;
+}
