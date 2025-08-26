@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <!--External style-->
+    <link rel="stylesheet" href="counter_style.css">
+    <!--bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!--created By Nima Sahgaldi-->
+</head>
+<body>
+    <div class="counter" style="width: 500px;height: 500px;">
+        <div class="title">
+            <h1>صلوات شمار</h1>
+        </div>
+        <br>
+        <div class="counter_value">
+            <span id="demo">0</span>
+        </div>
+        <br>
+        <div class="reset_btn">
+            <i class="bi bi-repeat reset_button" onclick="reset_function()"></i>
+        </div>
+        <div class="btns">
+            <center>
+                <div class="minus--icon">
+                    <button class="bi bi-file-minus-fill btn-styles"  id="demo2" onclick="kamkardan()"></button>
+                </div>
+            </center>
+            <center>
+                <div class="plus--icon">
+                    <button class="bi bi-file-plus-fill btn-styles" onclick="ezafehkardan()" ></button>
+                </div>
+            </center>
+        </div>
+    </div>
+    <script src="counter_script.js"></script>
+</body>
+</html>
