@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "vazir";
+    src: url(../fonts/vazir/Vazir-FD-WOL.ttf) format('truetype');
+    src: url(../fonts/vazir/Vazir-FD-WOL.woff) format('woff');
+    src:url(../fonts/vazir/Vazir-FD-WOL.woff2) format('woff2');
+    src: url(../fonts/vazir/Vazir-FD-WOL.eot) format('eot');
+}
+@font-face {
+    font-family: "vazir-Bold";
+    src: url(../fonts/vazir-Bold/Vazir-Bold-FD-WOL.ttf) format('truetype');
+    src: url(../fonts/vazir-Bold/Vazir-Bold-FD-WOL.woff) format('woff');
+    src: url(../fonts/vazir-Bold/Vazir-Bold-FD-WOL.woff2) format('woff2');
+    src: url(../fonts/vazir-Bold/Vazir-Bold-FD-WOL.eot) format('eot');
+}
+@font-face {
+    font-family: "vazir-light";
+    src: url(../fonts/vazir-light/Vazir-Light-FD-WOL.ttf) format('truetype');
+    src: url(../fonts/vazir-light/Vazir-Light-FD-WOL.woff) format('woff');
+    src: url(../fonts/vazir-light/Vazir-Light-FD-WOL.woff2) format('woff2');
+    src: url(../fonts/vazir-light/Vazir-Light-FD-WOL.eot) format('eot');
+}
+@font-face {
+    font-family: "vazir-medium";
+    src: url(../fonts/vazir-medium/Vazir-Medium-FD-WOL.ttf) format('truetype');
+    src: url(../fonts/vazir-medium/Vazir-Medium-FD-WOL.woff) format('woff');
+    src: url(../fonts/vazir-medium/Vazir-Medium-FD-WOL.woff2) format('woff2');
+    src: url(../fonts/vazir-medium/Vazir-Medium-FD-WOL.eot) format('eot');
+}
+@font-face {
+    font-family: "vazir-thin";
+    src: url(../fonts/vazir-thin/Vazir-Thin-FD-WOL.ttf) format('truetype');
+    src: url(../fonts/vazir-thin/Vazir-Thin-FD-WOL.woff) format('woff');
+    src: url(../fonts/vazir-thin/Vazir-Thin-FD-WOL.woff2) format('woff2');
+    src: url(../fonts/vazir-thin/Vazir-Thin-FD-WOL.eot) format('eot');
+}
+body{
+    direction: rtl;
+    background-color: rgb(180, 235, 235);
+    background-image: url(../images/jamkaran.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1{
+    font-family: "vazir-Bold";
+}
+.container{
+    width: 50%;
+    max-width: 400px;
+    min-width: 350px;
+    background-color: rgb(137, 211, 211);
+    height: 400px;
+    border-radius: 50px;
+    /* margin-top: 7%; */
+    margin-top:75px;
+}
+.amaliyat{
+    margin-top: 75px;
+}
+hr{
+    height: 2px;
+    color: #000;
+    background-color: #000;
+    outline: none;
+    border: none;
+}
+h3:hover{
+    cursor: pointer;
+    user-select: none;
+}
