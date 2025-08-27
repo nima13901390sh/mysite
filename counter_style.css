@@ -5,17 +5,17 @@
 }
 @font-face {
     font-family: "vazir-Bold";
-    src: url(fonts/vazir-Bold/Vazir-Bold-FD-WOL.ttf) format('truetype');
-    src: url(fonts/vazir-Bold/Vazir-Bold-FD-WOL.woff) format('woff');
-    src: url(fonts/vazir-Bold/Vazir-Bold-FD-WOL.woff2) format('woff2');
-    src: url(fonts/vazir-Bold/Vazir-Bold-FD-WOL.eot) format('eot');
+    src: url(Vazir-Bold-FD-WOL.ttf) format('truetype');
+    src: url(Vazir-Bold-FD-WOL.woff) format('woff');
+    src: url(Vazir-Bold-FD-WOL.woff2) format('woff2');
+    src: url(Vazir-Bold-FD-WOL.eot) format('eot');
 }
 @font-face {
     font-family: "vazir-medium";
-    src: url(fonts/vazir-medium/Vazir-Medium-FD-WOL.ttf) format('truetype');
-    src: url(fonts/vazir-medium/Vazir-Medium-FD-WOL.woff) format('woff');
-    src: url(fonts/vazir-medium/Vazir-Medium-FD-WOL.woff2) format('woff2');
-    src: url(fonts/vazir-medium/Vazir-Medium-FD-WOL.eot) format('eot');
+    src: url(Vazir-Medium-FD-WOL.ttf) format('truetype');
+    src: url(Vazir-Medium-FD-WOL.woff) format('woff');
+    src: url(Vazir-Medium-FD-WOL.woff2) format('woff2');
+    src: url(Vazir-Medium-FD-WOL.eot) format('eot');
 }
 body{
     /* background-color: blanchedalmond; */
@@ -81,3 +81,4 @@ button{
     justify-content: center;
     flex: 1;
 }
+
